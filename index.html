@@ -12,6 +12,18 @@
 		<input type="text" id="height"><br>
 		BMI結果<br>
 		<input type="text" id="bmi"><br>
-		<input type="button" id="btn" value="計算する">	
+		<input type="button" id="btn" value="計算する">
+		
+	<script>
+		// ボタンを取得
+                var button = document.getElementById("btn");
+
+                // ボタンがクリックされた時
+                button.addEventListener("click",function() {
+
+			// bmi結果の欄に0を入れる
+			document.getElementById("bmi").value = 0;
+		}, false);
+        </script>	
 	</body>
 </html>
