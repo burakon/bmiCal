@@ -20,15 +20,26 @@
 		<input type="button" id="btn" value="計算する">
 		
 	<script>
-		// ボタンを取得
-                var button = document.getElementById("btn");
+			// ボタンを取得
+			var button = document.getElementById("btn");
 
-                // ボタンがクリックされた時
-                button.addEventListener("click",function() {
+			// ボタンがクリックされた時
+			button.addEventListener("click",function() {
+				
+				// weight, heightという変数を作って、各テキストフィールドのvalueを入れる
+				let weight = document.getElementById("weight").value;
+				var height = document.getElementById("height").value;
 
-			// bmi結果の欄に0を入れる
-			document.getElementById("bmi").value = 0;
-		}, false);
+				// 身長をメートル表示にする
+				height = height * 0.01; 
+
+				// bmiという変数を作ってBMI計算した数字を入れる
+				// BMI＝体重(kg) ÷ { 身長(m) Ｘ 身長(m) }
+				var bmi = weight / ( height * height);
+
+				// bmi結果の欄にbmiを入れる
+				document.getElementById("bmi").value = bmi;
+				});
         </script>	
 	</body>
 </html>
