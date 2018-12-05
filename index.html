@@ -37,6 +37,9 @@
 				// BMI＝体重(kg) ÷ { 身長(m) Ｘ 身長(m) }
 				var bmi = weight / ( height * height);
 
+				// 小数点1位以下を切り捨て
+				bmi = bmi.toFixed(1);
+				
 				// bmi結果の欄にbmiを入れる
 				document.getElementById("bmi").value = bmi;
 				});
